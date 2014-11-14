@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/table">
+
+    <ImageView
+        android:layout_width="109dp"
+        android:layout_height="109dp"
+        android:id="@+id/imageView"
+        android:layout_row="8"
+        android:layout_column="32"
+        android:src="@drawable/secdice1" />
+
+    <ImageView
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:id="@+id/dice1"
+        android:layout_row="8"
+        android:layout_column="33"
+        android:src="@drawable/dice1" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roll Dice"
+        android:id="@+id/btnRollDice"
+        android:layout_row="28"
+        android:layout_column="31"
+        android:clickable="false"
+        android:onClick="RollDice"
+        android:layout_gravity="bottom|center_horizontal" />
+
+</GridLayout>
