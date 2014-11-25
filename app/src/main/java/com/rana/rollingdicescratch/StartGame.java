@@ -13,6 +13,10 @@ import android.widget.ImageView;
 public class StartGame extends Activity {
     Button btnRoll;
     ImageView imgdice1;
+    int count = -1;
+    private int[] arDiceImages = { R.drawable.imgdice1,R.drawable.imgdice2, R.drawable.imgdice3,
+            R.drawable.imgdice4, R.drawable.imgdice5,  R.drawable.imgdice6 };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +29,8 @@ public class StartGame extends Activity {
         btnRoll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imgdice1.setImageResource(R.drawable.imgdice2);
+                count = count + 1;
+                imgdice1.setImageResource(arDiceImages[count]);
             }
         });
     }
