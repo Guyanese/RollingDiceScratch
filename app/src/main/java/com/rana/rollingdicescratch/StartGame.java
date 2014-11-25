@@ -25,7 +25,7 @@ public class StartGame extends Activity {
         btnRoll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imgdice1.setImageResource(R.drawable.dice2);
+                imgdice1.setImageResource(R.drawable.imgdice2);
             }
         });
     }

@@ -4,23 +4,12 @@
     android:layout_height="match_parent"
     android:background="@drawable/table">
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RollDice"
-        android:id="@+id/btnRollDice"
-        android:layout_row="19"
-        android:layout_column="0"
-        android:onClick="OnClick"/>
 
     <ImageView
-        android:layout_width="154dp"
-        android:layout_height="154dp"
-        android:id="@+id/imgdice1"
-        android:layout_row="17"
-        android:layout_column="23"
-        android:src="@drawable/dice1" />
-
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_row="10"
+        android:layout_column="37" />
 
 </GridLayout>
