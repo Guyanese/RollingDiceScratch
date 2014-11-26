@@ -6,6 +6,14 @@
 
 
     <ImageView
+        android:layout_width="143dp"
+        android:layout_height="143dp"
+        android:id="@+id/imgdice2"
+        android:layout_row="7"
+        android:layout_column="36"
+        android:src="@drawable/imgdice1" />
+
+    <ImageView
         android:layout_width="141dp"
         android:layout_height="141dp"
         android:id="@+id/imgdice1"
