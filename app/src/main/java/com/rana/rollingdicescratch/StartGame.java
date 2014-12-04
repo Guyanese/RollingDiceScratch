@@ -15,10 +15,11 @@ import java.util.Random;
 public class StartGame extends Activity {
     Button btnRoll;
     ImageView imgdice1, imgdice2;
-    Random random = new Random();
-    int nCount = -1;
-    private int[] arDiceImages = { R.drawable.imgdice1,R.drawable.imgdice2, R.drawable.imgdice3,
-            R.drawable.imgdice4, R.drawable.imgdice5,  R.drawable.imgdice6 };
+    Random rRandom = new Random();
+    int nCount = -1, nCount2 = -1;
+    //http://stackoverflow.com/questions/16352975/android-how-to-get-4-images-in-array-from-ten-array-of-image-randomly
+    private int[] arDiceImages = {R.drawable.imgdice1, R.drawable.imgdice2, R.drawable.imgdice3,
+            R.drawable.imgdice4, R.drawable.imgdice5, R.drawable.imgdice6};
 
 
     @Override
@@ -27,19 +28,17 @@ public class StartGame extends Activity {
         setContentView(R.layout.startgame);
 
         btnRoll = (Button) findViewById(R.id.btnRollDice);
-       // https://www.youtube.com/watch?v=O6Tad0BlqUY&index=3&list=PLvnXjBkwUhDEfjK1pqT8LsGWPyFuzO5Zu
+        // https://www.youtube.com/watch?v=O6Tad0BlqUY&index=3&list=PLvnXjBkwUhDEfjK1pqT8LsGWPyFuzO5Zu
         imgdice1 = (ImageView) findViewById(R.id.imgdice1);
         imgdice2 = (ImageView) findViewById(R.id.imgdice2);
 
         btnRoll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //https://www.youtube.com/watch?v=yLwhzIPPYxo - Just used the code he used, here.
-                nCount = nCount + 1;
+                nCount = (int) Math.floor(Math.random() * arDiceImages.length);
+                nCount2 = (int) Math.floor(Math.random() * arDiceImages.length);
                 imgdice1.setImageResource(arDiceImages[nCount]);
-                imgdice2.setImageResource(arDiceImages[nCount]);
-                //int index = random.nextInt(arDiceImages[]);
-                //imgdice1.setImageResource(index);
+                imgdice2.setImageResource(arDiceImages[nCount2]);
             }
         });
 
