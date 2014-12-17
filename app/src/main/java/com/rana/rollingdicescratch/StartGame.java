@@ -15,7 +15,6 @@ import java.util.Random;
 public class StartGame extends Activity {
     Button btnRoll;
     ImageView imgdice1, imgdice2;
-    Random rRandom = new Random();
     int nCount = -1, nCount2 = -1;
     //http://stackoverflow.com/questions/16352975/android-how-to-get-4-images-in-array-from-ten-array-of-image-randomly
     private int[] arDiceImages = {R.drawable.imgdice1, R.drawable.imgdice2, R.drawable.imgdice3,
@@ -35,6 +34,7 @@ public class StartGame extends Activity {
         btnRoll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //http://www.computerhope.com/j18.htm
                 nCount = (int) Math.floor(Math.random() * arDiceImages.length);
                 nCount2 = (int) Math.floor(Math.random() * arDiceImages.length);
                 imgdice1.setImageResource(arDiceImages[nCount]);
